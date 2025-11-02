@@ -8,10 +8,7 @@
     src: url("woff2/Faune-Text_Bold.woff2") format("woff2");
     font-weight: 700;
 }
-h1{
-    color: rgb(54, 50, 236);
-    font-family: futura;
-}
+
 p{
     font-family: "futura";
     color: rgb(0, 0, 0);
@@ -55,21 +52,10 @@ p{
     "YPN2" 0;
 }
 
-
-bitcount-prop-single-ink-<uniquifier> h1{
-  font-family: "Bitcount Prop Single Ink", system-ui;
+h1{
+  font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 500;
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "CRSV" 0.5,
-    "ELSH" 0,
-    "ELXP" 0,
-    "SZP1" 0,
-    "SZP2" 0,
-    "XPN1" 0,
-    "XPN2" 0,
-    "YPN1" 0,
-    "YPN2" 0;
+  color: rgb(54, 50, 236);
 }
