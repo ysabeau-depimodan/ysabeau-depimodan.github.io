@@ -1,0 +1,75 @@
+@font-face{
+    font-family: "Faune";
+    src: url("woff2/Faune-Text_Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+@font-face{
+    font-family: "Faune";
+    src: url("woff2/Faune-Text_Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+h1{
+    color: rgb(54, 50, 236);
+    font-family: futura;
+}
+p{
+    font-family: "futura";
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+.chapo{
+    font-size: 15px;
+}
+.header{
+    background-color: rgb(177, 212, 241);
+    padding: 48px;
+    margin: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.header-grid {
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+}
+ .header-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: span 2;
+ }
+ h1{
+  font-family: "Bitcount Prop Single Ink", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0,
+    "SZP1" 0,
+    "SZP2" 0,
+    "XPN1" 0,
+    "XPN2" 0,
+    "YPN1" 0,
+    "YPN2" 0;
+}
+
+
+bitcount-prop-single-ink-<uniquifier> h1{
+  font-family: "Bitcount Prop Single Ink", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0,
+    "SZP1" 0,
+    "SZP2" 0,
+    "XPN1" 0,
+    "XPN2" 0,
+    "YPN1" 0,
+    "YPN2" 0;
+}
