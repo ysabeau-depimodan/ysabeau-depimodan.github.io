@@ -13,7 +13,7 @@
     --gray-medium: #e0e0e0;
     --gray-dark: #333333;
     --font-primary: 'Space Grotesk', sans-serif;
-    --font-secondary: 'Inter', sans-serif;
+    --font-secondary: 'Space Grotesk', sans-serif;
 }
 html {
     scroll-behavior: auto; /* Comportement normal */
