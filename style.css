@@ -1728,13 +1728,4 @@ body::before {
         font-size: 1.5rem !important;
     }
 }
-/* TEST TEMPORAIRE : Force Inter sur TOUT le body */
-body {
-    font-family: 'Inter', sans-serif !important; /* Remplace var(--font-secondary) temporairement */
-}
 
-/* Ou teste sur un élément spécifique, comme la barre noire */
-.portfolio-title {
-    font-family: 'Inter', sans-serif !important;
-    font-weight: 400 !important; /* Un poids qui existe */
-}
