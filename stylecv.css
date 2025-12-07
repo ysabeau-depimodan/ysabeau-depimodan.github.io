@@ -1,51 +1,263 @@
-@font-face{
-    font-family: "Faune";
-    src: url("woff2/Faune-Text_Regular.woff2") format("woff2");
-    font-weight: 400;
-}
-@font-face{
-    font-family: "Faune";
-    src: url("woff2/Faune-Text_Bold.woff2") format("woff2");
-    font-weight: 700;
+/* === Polices internes (Faune inutile ici, on la retire) === */
+/* Tu n'as plus besoin de Faune si tu veux Futura */
+
+/* === Base === */
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: "Futura", sans-serif; /* ← TEXTE NORMAL */
+  color: black;
+  line-height: 1.45;
 }
 
-p{
-    font-family: "futura";
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-}
-.chapo{
-    font-size: 15px;
-}
-.header{
-    background-color: rgb(177, 212, 241);
-    padding: 48px;
-    margin: 48px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-.header-grid {
-    display: grid ;
-    grid-template-columns: 1fr 1fr;
-}
- .header-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column: span 2;
- }
-
-
-h1{
-  font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
+/* === Titres === */
+h1, h2 {
+  font-family: "Space Grotesk", sans-serif; /* ← TITRES */
   font-weight: 500;
-  font-style: normal;
-  color: rgb(54, 50, 236);
+  margin: 0 0 12px 0;
 }
-h2{
-  font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  color: rgb(54, 50, 236);
+
+h2 {
+  font-size: 20px;
+  margin-top: 36px;
+}
+
+/* === Paragraphe & listes === */
+p, li {
+  font-family: "Futura", sans-serif; /* ← RETOUR À TA PREMIÈRE TYPO */
+  font-size: 15px;
+  margin: 0 0 10px 0;
+}
+
+/* === Sous-titres et labels === */
+.subtitle-header,
+.label {
+  font-family: "Inter", sans-serif; /* ← LABELS */
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* === Header Noir === */
+.header-black {
+  background: black;
+  color: white;
+  padding: 48px;
+}
+
+.header-black h1 {
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.subtitle-header {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* === Layout 2 colonnes === */
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  padding: 48px;
+}
+
+/* === Barre de séparation === */
+.divider {
+  height: 2px;
+  width: 100%;
+  background: black;
+  margin: 8px 0 20px 0;
+}
+
+/* === Grille dates / contenu === */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px 24px;
+}
+
+.label {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+/* === listes === */
+ul {
+  padding-left: 16px;
+  margin: 0 0 16px 0;
+}
+
+.experience p {
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+/* --- Contacts dans la barre noire --- */
+.contact-header {
+  margin-top: 24px;
+}
+
+.contact-header p {
+  color: white;
+  font-family: "Futura", sans-serif;
+  font-size: 14px;
+  margin: 2px 0;
+  opacity: 0.9;
+}
+
+/* === Barre pleine largeur en bas === */
+.cv-fullbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.cv-fullbar-link {
+  color: white;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+}
+
+.cv-fullbar-link:hover {
+  opacity: 0.7;
+}
+
+/* Ajouter un padding en bas du contenu pour éviter que la barre cache le texte */
+.layout {
+  padding-bottom: 80px;
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+
+/* TABLETTES (768px et moins) */
+@media (max-width: 768px) {
+  .header-black {
+    padding: 32px 24px;
+  }
+  
+  .header-black h1 {
+    font-size: 32px;
+  }
+  
+  .subtitle-header {
+    font-size: 16px;
+  }
+  
+  .layout {
+    grid-template-columns: 1fr; /* UNE SEULE COLONNE */
+    gap: 24px;
+    padding: 32px 24px 80px 24px;
+  }
+  
+  .grid-2 {
+    grid-template-columns: 80px 1fr; /* Réduire la colonne des dates */
+    gap: 12px 16px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-top: 28px;
+  }
+  
+  p, li {
+    font-size: 14px;
+  }
+  
+  .experience p {
+    margin-bottom: 24px;
+  }
+}
+
+/* PETITS MOBILES (480px et moins) */
+@media (max-width: 480px) {
+  .header-black {
+    padding: 24px 20px;
+  }
+  
+  .header-black h1 {
+    font-size: 28px;
+  }
+  
+  .subtitle-header {
+    font-size: 14px;
+  }
+  
+  .layout {
+    padding: 24px 20px 80px 20px;
+    gap: 20px;
+  }
+  
+  .grid-2 {
+    grid-template-columns: 1fr; /* Dates au-dessus du texte sur très petit écran */
+    gap: 4px 0;
+  }
+  
+  .grid-2 p:nth-child(odd) {
+    font-weight: 600; /* Mettre les dates en gras */
+    margin-bottom: 4px;
+  }
+  
+  h2 {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+  
+  p, li {
+    font-size: 13px;
+  }
+  
+  .label {
+    font-size: 14px;
+  }
+  
+  .experience p {
+    margin-bottom: 20px;
+  }
+  
+  .cv-fullbar {
+    height: 50px;
+  }
+  
+  .cv-fullbar-link {
+    font-size: 12px;
+  }
+}
+
+/* TRÈS PETITS ÉCRANS (360px et moins) */
+@media (max-width: 360px) {
+  .header-black {
+    padding: 20px 16px;
+  }
+  
+  .header-black h1 {
+    font-size: 24px;
+  }
+  
+  .layout {
+    padding: 20px 16px 70px 16px;
+  }
+  
+  h2 {
+    font-size: 15px;
+  }
+  
+  p, li {
+    font-size: 12px;
+  }
 }
