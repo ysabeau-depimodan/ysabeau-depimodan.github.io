@@ -1670,15 +1670,21 @@ body::before {
 }
 /* ==== TITRES DE PROJETS – GRANTHA SANGAM MN, GROS MAIS ÉQUILIBRÉ, SANS OMBRE ==== */
 .project-title h4 {
-    font-family: "Grantha Sangam MN", Georgia, serif !important;
-    font-weight: 400 !important;
-    font-size: 3.4rem !important;          /* parfait sur grand écran */
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 3.6rem !important;
     line-height: 1 !important;
-    letter-spacing: -0.5px !important;
+    letter-spacing: -1.4px !important;
     color: var(--secondary-color) !important;
-    text-shadow: none !important;           /* ombre complètement supprimée */
+    text-shadow: none !important;
     margin: 0 !important;
+    text-transform: uppercase;
 }
+
+/* Adaptation mobile */
+@media (max-width: 1024px) { .project-title h4 { font-size: 2.8rem !important; } }
+@media (max-width: 768px)  { .project-title h4 { font-size: 2.3rem !important; } }
+@media (max-width: 480px)  { .project-title h4 { font-size: 1.9rem !important; } }
 
 /* Tablette */
 @media (max-width: 1024px) {
