@@ -161,16 +161,7 @@ body {
     text-align: center;
 }
 
-/* Grille des projets - PLEINE LARGEUR */
-.projects-preview {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5mm; /* 5mm entre les images */
-    margin-bottom: 40px;
-    padding: 0 5mm; /* 5mm sur les côtés */
-    box-sizing: border-box;
-    width: 100%;
-}
+
 
 /* Cartes de projet - PLEINE LARGEUR */
 .project-card {
@@ -1623,22 +1614,7 @@ body {
     margin-left: calc(-50vw + 50%) !important;
     border-radius: 0 !important;
 }
-/* ==== IMAGE HERO EN ARRIÈRE-PLAN FIXE TRÈS LÉGER ==== */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('page-debut.jpg');    /* même image que ta hero */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.40;            /* très léger – mets 0.05 pour encore plus discret, 0.1 pour un peu plus visible */
-    z-index: -1;              /* toujours derrière tout */
-    pointer-events: none;
-}
+
 
 
 /* ==== BARRE NOIRE ENTIÈRE CLIQUABLE ==== */
@@ -1669,6 +1645,7 @@ body::before {
     color: white;
 }
 /* ==== TITRES DE PROJETS – GRANTHA SANGAM MN, GROS MAIS ÉQUILIBRÉ, SANS OMBRE ==== */
+/* Titres des projets → Space Grotesk à la place de Grantha Sangam MN */
 .project-title h4 {
     font-family: 'Inter', sans-serif !important;
     font-weight: 600 !important;
@@ -1733,5 +1710,63 @@ body::before {
     .project-title h4 {
         font-size: 1.5rem !important;
     }
+}
+.site-name {
+    font-family: 'Baskervville', serif !important;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+}
+.subtitle {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transform: translateX(-4px); /* ajuste si nécessaire */
+}
+.site-name {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+}
+#main {
+    position: relative;
+    min-height: 120vh;
+
+    background-image: url("fond-acceuil.jpg");
+    background-size: cover;        /* l’image couvre tout */
+    background-position: center;   /* centrée */
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+
+#main {
+    min-height: 120vh;
+}
+.site-name,
+.subtitle {
+    color: #ffffff;
+}
+.portfolio-title {
+    text-decoration: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.portfolio-title:hover {
+    opacity: 1;
+}
+.subtitle {
+    font-family: 'Baskervville', serif;
+}
+.project-category {
+    margin-bottom: 0.1rem;
+}
+.projects-preview {
+    display: flex;
+    gap: 1.6rem;
 }
 
